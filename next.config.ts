@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projectRoot,
   },
+  /** Ship committed Inter fonts in /fonts/inter with the /api/resume lambda. */
+  outputFileTracingIncludes: {
+    "/api/resume": ["./fonts/inter/**/*.woff"],
+  },
 };
 
 export default nextConfig;
