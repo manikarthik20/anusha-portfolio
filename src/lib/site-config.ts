@@ -95,7 +95,7 @@ export const siteConfig = {
       company: "OJAS (Oneable)",
       location: "Hyderabad, India",
       role: "Java Developer",
-      period: "May 2023 – Mar 2024",
+      period: "Jan 2023 – Mar 2024",
       bullets: [
         "Delivered the integration module for Oneable, a user performance tracking system across apps and web.",
         "Implemented APIs to ingest real-time data from Jira, Git, and Microsoft Teams (issues, tasks, meetings, commits).",
@@ -105,7 +105,7 @@ export const siteConfig = {
       company: "OJAS (client: Texed)",
       location: "Dehradun, India",
       role: "Java Developer",
-      period: "Jun 2022 – Dec 2022",
+      period: "Jan 2022 – Dec 2022",
       bullets: [
         "Contributed to a Construction Management System improving budgeting, communication, and project decisions.",
         "Developed features for daily operations, inventory, and materials/equipment management.",
