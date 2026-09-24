@@ -348,14 +348,6 @@ const styles = StyleSheet.create({
   },
 });
 
-const pdfSkillCategories: { label: string; value: string }[] = [
-  { label: "Languages", value: "Java, JavaScript, HTML, CSS" },
-  { label: "Backend", value: "Spring Boot, Spring MVC, Microservices" },
-  { label: "Security & auth", value: "Spring Security, JWT, OAuth2, SAML, LDAP, RBAC, MFA" },
-  { label: "Data & cache", value: "MySQL, Redis, RedisTemplate" },
-  { label: "Tools", value: "Git, GitHub, Bitbucket, Maven, IntelliJ IDEA, Eclipse, STS, Windows" },
-];
-
 const MAX_PROJECT_BULLETS = 4;
 
 function Bullet({
@@ -485,10 +477,10 @@ function ContactLeftColumn() {
       <Text style={styles.locationText}>{siteConfig.location}</Text>
 
       <Text style={styles.sideSectionTitle}>Skills</Text>
-      {pdfSkillCategories.map((cat) => (
-        <View key={cat.label} style={styles.skillCategory}>
-          <Text style={styles.skillCatLabel}>{cat.label}</Text>
-          <Text style={styles.skillCatValue}>{cat.value}</Text>
+      {siteConfig.skillCategories.map((cat) => (
+        <View key={cat.title} style={styles.skillCategory}>
+          <Text style={styles.skillCatLabel}>{cat.title}</Text>
+          <Text style={styles.skillCatValue}>{cat.items.join(", ")}</Text>
         </View>
       ))}
     </View>
@@ -498,7 +490,7 @@ function ContactLeftColumn() {
 function buildSummaryLines(): string[] {
   const y = siteConfig.experienceYears;
   return [
-    `Java developer with ${y}+ years of experience designing and maintaining web applications with Java, Spring Boot, and microservices-oriented architectures.`,
+    `Java developer with ${y} years of experience designing and maintaining web applications with Java, Spring Boot, and microservices-oriented architectures.`,
     "Strong in secure enterprise patterns: RBAC, MFA, JWT, OAuth2, SAML, LDAP, and Redis-backed session management for banking and internal platforms.",
     "Hands-on with Core Banking System (CBS) integrations, authentication services, and compliance-aware transaction and account workflows.",
     "Collaborative problem-solver who partners with cross-functional teams to deliver reliable APIs, clear documentation, and production-ready features.",

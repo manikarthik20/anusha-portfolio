@@ -1,32 +1,7 @@
 import { Code2, Database, Layers, Shield, Wrench } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
-const categories = [
-  {
-    title: "Languages & web",
-    icon: Code2,
-    items: ["Java", "JavaScript", "HTML", "CSS"],
-  },
-  {
-    title: "Spring & backend",
-    icon: Layers,
-    items: ["Spring Boot", "Spring MVC", "Spring", "Microservices"],
-  },
-  {
-    title: "Security & sessions",
-    icon: Shield,
-    items: ["Spring Security", "JWT", "OAuth2", "SAML", "LDAP", "Redis sessions"],
-  },
-  {
-    title: "Data stores",
-    icon: Database,
-    items: ["MySQL", "Redis", "RedisTemplate"],
-  },
-  {
-    title: "Tools & delivery",
-    icon: Wrench,
-    items: ["Git", "GitHub", "Bitbucket", "Maven", "IntelliJ IDEA", "Eclipse", "STS"],
-  },
-];
+const icons = [Code2, Layers, Shield, Database, Wrench] as const;
 
 export function Skills() {
   return (
@@ -42,8 +17,8 @@ export function Skills() {
           Core stack from banking, SSO, and integration projects—Java-first, with security and data layers front and center.
         </p>
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((cat) => {
-            const Icon = cat.icon;
+          {siteConfig.skillCategories.map((cat, index) => {
+            const Icon = icons[index];
             return (
               <li
                 key={cat.title}

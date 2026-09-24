@@ -11,7 +11,7 @@ export const siteConfig = {
   tagline:
     "Dynamic, detail-oriented Java developer building secure banking and enterprise backends with Spring Boot, microservices, and strong collaboration across teams.",
   techSubtitle: "Java · Spring Boot · Spring Security · LDAP · Microservices",
-  experienceYears: "4.3",
+  experienceYears: "4+",
   location: "India",
   languages: ["Telugu", "English"],
   email: "anushajagari@gmail.com",
@@ -24,6 +24,13 @@ export const siteConfig = {
       "Nova College of Engineering & Technology, Hyderabad — Affiliated to JNTUH",
     period: "",
   },
+  skillCategories: [
+    { title: "Languages & web", items: ["Java", "JavaScript", "HTML", "CSS"] },
+    { title: "Spring & backend", items: ["Spring Boot", "Spring MVC", "Spring", "Microservices"] },
+    { title: "Security & sessions", items: ["Spring Security", "JWT", "OAuth2", "SAML", "LDAP", "Redis sessions"] },
+    { title: "Data stores", items: ["MySQL", "Redis", "RedisTemplate"] },
+    { title: "Tools & delivery", items: ["Git", "GitHub", "Bitbucket", "Maven", "IntelliJ IDEA", "Eclipse", "STS"] },
+  ],
   projects: [
     {
       title: "Core Banking & Security (CBS)",
