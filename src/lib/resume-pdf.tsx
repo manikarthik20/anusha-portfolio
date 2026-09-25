@@ -433,7 +433,7 @@ function JobBlock({ job }: { job: (typeof siteConfig.jobs)[number] }) {
             <Text style={styles.jobMeta}>
               {job.company} — {job.location}
             </Text>
-            {"note" in job && job.note ? (
+            {"note" in job && typeof job.note === "string" && job.note ? (
               <Text style={styles.jobNote}>{job.note}</Text>
             ) : null}
           </View>
